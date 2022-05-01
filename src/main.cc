@@ -83,7 +83,7 @@ void display(
     std::cout << "WORDLE\n\n";
     for (int i = 0; i < 6; ++i) {
         if (currentGuess < i) {
-            std::cout << color("0 0 0 0 0 \n", WHITE);
+            std::cout << color(". . . . .\n", WHITE);
             continue;
         }
         for (int j = 0; j < 5; ++j) {
@@ -130,4 +130,5 @@ int main(int argc, const char* const* argv) {
         }
         ++i;
     }
+    std::cout << word << '\n';
 }
